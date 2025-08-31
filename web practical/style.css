@@ -1,0 +1,583 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('Area-Profile-Northern-Cape-ImmoAfrica.jpg') no-repeat center/cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    position: relative;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #e2a82a;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .btn-login {
+    padding: 8px 16px;
+    background: #fff;
+    color: #162938;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navigation .btn-login:hover {
+    background: #162938;
+    color: #fff;
+}
+
+/* Hidden by default */
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    z-index: 2000;
+    transition: transform 0.4s ease;
+}
+
+/* When targeted */
+.wrapper:target {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-box h2 {
+    color: #e2a82a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #162938;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #162938;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    font-weight: 600;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    color: #fff;
+    font-size: 0.85em;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #162938;
+    font-size: 1.2em;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #162938;
+    margin: 10px 0 20px;
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #1f3647;
+}
+
+.login-register {
+    text-align: center;
+    font-size: 0.9em;
+    color: #162938;
+    margin-top: 20px;
+}
+
+.login-register a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 10px 20px;
+    }
+    .navigation a {
+        margin-left: 15px;
+    }
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+/* About Section */
+.about {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about h1 {
+    font-size: 2.5em;
+    color: #162938;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #e2a82a;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    font-size: 1.1em;
+    color: #162938;
+    margin-bottom: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+}
+
+footer {
+    background: #162938;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/* Services page specific styles */
+.services {
+    margin-top: 100px; /* Adjust depending on your header height */
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.services h1 {
+    font-size: 2.5em;
+    color: #162938;
+    margin-bottom: 20px;
+}
+
+.services p {
+    font-size: 1.1em;
+    color: #162938;
+    margin-bottom: 40px;
+}
+
+.service-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item ion-icon {
+    font-size: 3em;
+    color: #e2a82a;
+    margin-bottom: 10px;
+}
+
+.service-item h2 {
+    font-size: 1.5em;
+    color: #162938;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #666;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin: 10px;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto; /* Ensures the container is centered horizontally */
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+main .contact-info h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+main .contact-info p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    list-style: none;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #2c3e50;
+    padding: 0;
+}
+
+.contact-details li {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin-top: 30px;
+}
+
+
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+h1, h2 {
+    color: #50ebe9;
+    font-weight: 700;
+}
+
+h3, p {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    padding: 12px 20px;
+    background: #e2a82a;
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background: #162938;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+.about-section ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-section .testimonial {
+    margin-bottom: 20px;
+}
+
+.testimonials-section .btn {
+    margin-top: 20px;
+}
+
+/* Attractions Section */
+.attractions-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.attractions-section .attraction {
+    margin-bottom: 30px;
+}
+
+.attractions-section .attraction img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.attractions-section .btn {
+    margin-top: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #ece9e9;
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+.contact-section .btn {
+    margin-top: 20px;
+}
+
+/* Footer */
+
+/* Footer */
+footer {
+    background: transparent;
+    color: #fff; /* white text */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.kgalagadi-img {
+    width: 30px;
+    height: 20px;
+}
+
+.augrabies-image {
+    width: 81%;
+    height: 120%;
+    margin-bottom: 2px;
+}
+
+.Falls{
+    margin-bottom: 60px;
+}
+
+.Park{
+    margin-bottom: 60px;
+}
+
+.guided-tours{
+    text-align: center;
+}
+
+.tour-details {
+    color: #1e00ff; 
+}
+
+.adventure-activities{
+    text-align: center;
+    color : #f20808;
+}
+
+.booking{
+    text-align: center;
+}
+
+.confirmation{
+    text-align: center;
+}
+
+.about{
+    margin-top: 78px;
+}

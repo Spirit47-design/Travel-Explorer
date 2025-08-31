@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Travel Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        /* Extra styling for better button arrangement */
+        .button-group {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn-service, .btn-book {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-service {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-service:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-book {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .btn-book:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2 class="logo">Travel Explorer</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h1>Our Services</h1>
+        <p>Explore the world with our personalized services designed for every traveler visiting Northern Cape, South Africa.</p>
+
+        <div class="service-box">
+            <div class="service-item">
+                <ion-icon name="compass-outline"></ion-icon>
+                <h2>Guided Tours</h2>
+                <p>Explore breathtaking landscapes of Northern Cape with our expert guides.</p>
+                <p><strong>From R500 per person</strong></p>
+                <div class="button-group">
+                    <a href="guided-tours.html" class="btn-service">Learn More</a>
+                    <a href="booking.html?service=guided-tours" class="btn-book">Book Now</a>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <ion-icon name="bed-outline"></ion-icon>
+                <h2>Accommodation Booking</h2>
+                <p>Find the best resorts and cozy guesthouses around Northern Cape.</p>
+                <p><strong>From R800 per night</strong></p>
+                <div class="button-group">
+                    <a href="accommodation-booking.html" class="btn-service">Learn More</a>
+                    <a href="booking.html?service=accommodation-booking" class="btn-book">Book Now</a>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <ion-icon name="car-sport-outline"></ion-icon>
+                <h2>Car Rentals</h2>
+                <p>Rent SUVs and 4x4s to explore Northern Cape at your own pace.</p>
+                <p><strong>From R600 per day</strong></p>
+                <div class="button-group">
+                    <a href="car-rentals.html" class="btn-service">Learn More</a>
+                    <a href="booking.html?service=car-rentals" class="btn-book">Book Now</a>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <ion-icon name="flash-outline"></ion-icon>
+                <h2>Adventure Activities</h2>
+                <p>Experience hiking, sandboarding, safaris, and more thrilling adventures.</p>
+                <p><strong>Activities start from R300</strong></p>
+                <div class="button-group">
+                    <a href="adventure-activities.html" class="btn-service">Learn More</a>
+                    <a href="booking.html?service=adventure-activities" class="btn-book">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

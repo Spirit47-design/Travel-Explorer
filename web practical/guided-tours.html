@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guided Tours - Travel Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #2ecc71;
+        }
+
+        section.guided-tours {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        section.guided-tours h1 {
+            text-align: center;
+            font-size: 2.4em;
+            color: #3498db;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        section.guided-tours h2 {
+            color: #3498db;
+            margin-top: 30px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        section.guided-tours p,
+        section.guided-tours li {
+            font-size: 1.2em;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        section.guided-tours ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        section.guided-tours ul li {
+            padding-left: 20px;
+            position: relative;
+        }
+
+        section.guided-tours ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-size: 1.5em;
+            top: 2px;
+        }
+
+        .btn-book {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-book:hover {
+            background-color: #27ae60;
+            transform: translateY(-3px);
+        }
+
+        .btn-book:active {
+            transform: translateY(2px);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2 class="logo">Travel Explorer</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Guided Tours Section -->
+    <section class="guided-tours">
+        <h1>Guided Tours</h1>
+        <p>Explore Northern Cape like never before with our expertly guided tours. From the majestic Kalahari Desert to the rugged coastline, our tours provide in-depth insight into the rich cultural and natural heritage of the region.</p>
+
+        <h2>How Our Guided Tours Work</h2>
+        <p>Our tours are carefully crafted to give you the best experience possible. Here’s how it works:</p>
+        <ul>
+            <li><strong>Expert Guides:</strong> All of our guides are local experts, passionate about sharing the wonders of Northern Cape with you. They’ll make sure your journey is informative, engaging, and enjoyable.</li>
+            <li><strong>Customizable Itineraries:</strong> Whether you’re interested in history, nature, or adventure, we offer flexible itineraries. You can choose from our set tours or personalize your trip based on your interests.</li>
+            <li><strong>Comfortable Transport:</strong> Travel in comfort in our air-conditioned vehicles, including luxury vans, buses, or 4x4s. Our vehicles are equipped to handle all terrains and ensure a smooth journey.</li>
+            <li><strong>All-Inclusive Packages:</strong> Most of our guided tours are all-inclusive, meaning transportation, meals, park fees, and sometimes accommodations are included. We’ll take care of everything so you can focus on enjoying your adventure.</li>
+        </ul>
+
+        <h2>Available Tours</h2>
+        <p>We offer a variety of tours to explore different parts of Northern Cape. Below are some of our most popular tours:</p>
+
+        <ul>
+            <li><strong>Desert Safari:</strong> Explore the vast expanse of the Kalahari Desert. Enjoy dune drives, wildlife spotting, and learn about the desert ecosystem from our experienced guides.</li>
+            <li><strong>Coastal Exploration:</strong> Discover the pristine beaches and rugged coastlines of Northern Cape. Visit secluded bays and enjoy the beautiful coastal scenery.</li>
+            <li><strong>Wildlife Safari:</strong> Experience the thrill of a safari in one of Northern Cape’s game reserves. See animals like giraffes, lions, cheetahs, and more in their natural habitat.</li>
+            <li><strong>Cultural Heritage Tour:</strong> Learn about the diverse cultural history of Northern Cape, from indigenous tribes to colonial influences. Visit heritage sites and engage with local communities.</li>
+        </ul>
+
+        <h2>What to Expect</h2>
+        <p>On your guided tour, expect a memorable, immersive experience with a mix of sightseeing, adventure, and learning:</p>
+        <ul>
+            <li><strong>Engaging Guides:</strong> Our guides will provide interesting stories, history, and cultural insights throughout the tour. You’ll not only see Northern Cape; you’ll learn about its rich history and ecosystem.</li>
+            <li><strong>Photo Opportunities:</strong> Don’t forget your camera! The landscapes, wildlife, and cultural scenes will provide plenty of stunning photo opportunities.</li>
+            <li><strong>Safety & Comfort:</strong> Your safety is our priority. Our guides are trained in first aid, and we ensure that our vehicles and accommodations meet the highest safety standards.</li>
+        </ul>
+
+        <h2>Booking Your Tour</h2>
+        <p>Ready to explore Northern Cape? Click the "Book Now" button to reserve your spot on one of our guided tours. Fill out the booking form, and our team will confirm your reservation shortly.</p>
+
+        <a href="booking.html?service=guided-tours" class="btn-book">Book Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

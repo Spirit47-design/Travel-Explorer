@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Activities - Travel Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        section.adventure-activities {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section.adventure-activities h1 {
+            color: #e74c3c;
+            font-size: 2.8em;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        section.adventure-activities h2 {
+            color: #e74c3c;
+            font-size: 2em;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        section.adventure-activities p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        section.adventure-activities ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        section.adventure-activities ul li {
+            font-size: 1.1em;
+            margin: 12px 0;
+            line-height: 1.6;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        section.adventure-activities ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-size: 1.5em;
+            top: 2px;
+        }
+
+        .btn-book {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 1.3em;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-book:hover {
+            background-color: #27ae60;
+            transform: translateY(-3px);
+        }
+
+        .btn-book:active {
+            transform: translateY(2px);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2 class="logo">Travel Explorer</h2>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Adventure Activities Section -->
+    <section class="adventure-activities">
+        <h1>Adventure Activities</h1>
+        <p>Get ready for unforgettable adventures in the heart of Northern Cape, South Africa! Whether you seek adrenaline rushes or scenic nature experiences, we offer a wide variety of thrilling activities for all kinds of travelers.</p>
+
+        <h2>Our Adventure Activities</h2>
+        <div class="activity-details">
+            <ul>
+                <li><strong>Dune Driving:</strong> Take on the Kalahari's endless dunes in a powerful 4x4 vehicle. Feel the adrenaline as you race across sand waves and experience the vast beauty of the desert landscape.</li>
+                <li><strong>Hiking Expeditions:</strong> Explore the stunning landscapes of Augrabies Falls National Park and Richtersveld. Our hiking trails cater to all levels, from easy walks to challenging multi-day treks.</li>
+                <li><strong>River Rafting:</strong> Paddle through the mighty Orange River with our expert guides. Whether you're a beginner or an experienced rafter, we offer safe and exhilarating river rafting experiences.</li>
+                <li><strong>Sandboarding:</strong> Surf the giant red dunes! No experience needed — our instructors will teach you everything you need to know. A must-try activity for thrill-seekers!</li>
+                <li><strong>Hot Air Balloon Rides:</strong> Experience the serenity of floating over vast desert landscapes and rugged mountains. Watch breathtaking sunrises from the sky with panoramic views you’ll never forget.</li>
+                <li><strong>Wildlife Safaris:</strong> Venture into private game reserves and spot wildlife including lions, giraffes, cheetahs, and antelopes. Guided game drives ensure an authentic and safe wildlife experience.</li>
+            </ul>
+        </div>
+
+        <h2>Why Choose Our Adventures?</h2>
+        <ul>
+            <li><strong>Professional Guides:</strong> Our team consists of trained adventure guides who ensure both safety and fun during every activity.</li>
+            <li><strong>High-Quality Equipment:</strong> We use only the best gear and vehicles, regularly inspected and maintained for top performance.</li>
+            <li><strong>Customizable Packages:</strong> Mix and match activities to build your dream adventure itinerary tailored to your pace and interests.</li>
+            <li><strong>Safety First:</strong> We follow strict safety protocols and our guides are certified in first aid and rescue operations.</li>
+        </ul>
+
+        <h2>Ready for Adventure?</h2>
+        <p>Don't miss out on the adventure of a lifetime! Book your activities today and create unforgettable memories in Northern Cape.</p>
+
+        <a href="booking.html?service=adventure-activities" class="btn-book">Book Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
